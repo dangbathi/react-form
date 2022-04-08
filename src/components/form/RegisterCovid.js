@@ -29,12 +29,12 @@ const RegisterCovid = () => {
                 .required("passport input not empty")
                 .min(9, "passport number must be at least 9 num long")
                 .max(12, "passport number must have a maximum of 12 numbers"),
-            gender: Yup.bool().nullable("please check"),
+            gender: Yup.string().nullable("please check"),
             year: Yup.date().nullable("please check option year"),
-            nation: Yup.bool().nullable("please check option nation"),
-            province: Yup.bool().nullable("please check option province"),
-            district: Yup.bool().nullable("please check option district"),
-            wards: Yup.bool().nullable("please check option wards"),
+            nation: Yup.string().nullable("please check option nation"),
+            province: Yup.string().nullable("please check option province"),
+            district: Yup.string().nullable("please check option district"),
+            wards: Yup.string().nullable("please check option wards"),
             address: Yup.string().required("name input not empty"),
             phone: Yup
                 .number("please enter number type")
