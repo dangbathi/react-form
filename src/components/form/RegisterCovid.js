@@ -55,7 +55,7 @@ const RegisterCovid = () => {
     return (
         <Card className='mt-5 justify-content-md-center shadow p-3 mb-5 bg-white rounded' as={Col} md={{ span: 6, offset: 3 }}>
             <Card.Body>
-                <Card.Title className='text-warning'>Khai Báo Y Tế</Card.Title>
+                <Card.Title className='text-warning text-center font-weight-bold'>Khai Báo Y Tế</Card.Title>
                 <Form onSubmit={formik.handleSubmit} >
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label bg="warning" >Họ và tên</Form.Label>
