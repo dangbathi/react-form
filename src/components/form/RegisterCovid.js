@@ -1,6 +1,6 @@
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
-import { Form, Button, Card } from 'react-bootstrap'
+import { Form, Button, Card, Col } from 'react-bootstrap'
 
 
 const RegisterCovid = () => {
@@ -53,10 +53,10 @@ const RegisterCovid = () => {
 
 
     return (
-        <Card className='mt-5'>
+        <Card className='mt-5 justify-content-md-center shadow p-3 mb-5 bg-white rounded' as={Col} md={{ span: 6, offset: 3 }}>
             <Card.Body>
                 <Card.Title className='text-warning'>Khai Báo Y Tế</Card.Title>
-                <Form onSubmit={formik.handleSubmit}>
+                <Form onSubmit={formik.handleSubmit} >
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label bg="warning" >Họ và tên</Form.Label>
                         <Form.Control
@@ -155,7 +155,7 @@ const RegisterCovid = () => {
                             <option value="Đà Nẵng">Đà Nẵng</option>
                         </Form.Select>
                         {formik.errors.province && (
-                            <Form.Label className='text-danger'  >
+                            <Form.Label className='text-danger' >
                                 {formik.errors.province}
                             </Form.Label>
                         )}
@@ -169,7 +169,7 @@ const RegisterCovid = () => {
                             <option value="Thanh Xuân">Thanh Xuân</option>
                         </Form.Select>
                         {formik.errors.district && (
-                            <Form.Label className='text-danger'  >
+                            <Form.Label className='text-danger' >
                                 {formik.errors.district}
                             </Form.Label>
                         )}
@@ -192,7 +192,7 @@ const RegisterCovid = () => {
                             onChange={formik.handleChange}
                         />
                         {formik.errors.address && (
-                            <Form.Label className='text-danger'  >
+                            <Form.Label className='text-danger' >
                                 {formik.errors.address}
                             </Form.Label>
                         )}
@@ -206,7 +206,7 @@ const RegisterCovid = () => {
                             onChange={formik.handleChange}
                         />
                         {formik.errors.phone && (
-                            <Form.Label className='text-danger'  >
+                            <Form.Label className='text-danger' >
                                 {formik.errors.phone}
                             </Form.Label>
                         )}
@@ -221,7 +221,7 @@ const RegisterCovid = () => {
                             onChange={formik.handleChange}
                         />
                         {formik.errors.email && (
-                            <Form.Label className='text-danger'  >
+                            <Form.Label className='text-danger' >
                                 {formik.errors.email}
                             </Form.Label>
                         )}
